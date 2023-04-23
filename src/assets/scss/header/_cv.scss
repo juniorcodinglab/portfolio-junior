@@ -1,0 +1,22 @@
+&__cv {
+    a {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        text-decoration: none;
+        color: $brown-dark;
+        border: 2px solid $brown-dark;
+        border-radius: 6px;
+        gap: 5px;
+        transition: .2s all ease-in-out;
+
+        &:hover {
+            background-color: $brown-dark;
+            color: #FFF;
+
+            path {
+                fill: #FFF;
+            }
+        }
+    }
+}

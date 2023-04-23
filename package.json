@@ -9,10 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "sass": "^1.62.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
-    "vite": "^4.3.0"
+    "vite": "^4.3.0",
+    "vue-svg-loader": "^0.16.0"
   }
 }

@@ -7,6 +7,12 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: { additionalData: `@import "assets/scss/app.scss";`}
-    }
+  },
+  rules: [
+    {
+      test: /\.svg$/,
+      loader: 'vue-svg-loader', // `vue-svg` for webpack 1.x
+    },
+  ],
   }
 })
