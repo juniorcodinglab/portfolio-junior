@@ -1,0 +1,48 @@
+
+@mixin font($txtColor, $weight, $size, $height) {
+    color: $txtColor;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+}
+
+@mixin flex($pos: xy, $x: center, $y: center) {
+    display: flex;
+
+    @if $pos == 'xy' {
+        justify-content: center;
+        align-items: center;
+    } @else if $pos == 'x' {
+        justify-content: center;
+    } @else if $pos == 'y' {
+        align-items: center;
+    }
+}
+
+@mixin for-phone-only {
+    @media (max-width: 767px) { @content; }
+}
+  
+@mixin for-tablet-only {
+    @media (min-width: 768px) and (max-width: 1199px) { @content; }
+}
+  
+@mixin for-desktop-only {
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin scrolllayout($track, $scrollbar, $thumb) {
+    &::-webkit-scrollbar-track {
+        background-color: $track;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        background: $scrollbar;
+    }
+    &::-webkit-scrollbar-thumb {
+        //background: rgb(196, 196, 196);
+        background: $thumb;
+        border-radius: 4px;
+    }
+}
+

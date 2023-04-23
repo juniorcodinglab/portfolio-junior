@@ -1,13 +1,35 @@
 &__nav {
-
+    @include for-phone-only {
+        display: block;
+        display: none;
+        position: fixed;
+        width: 90%;
+        background-color: $beige;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
     ul {
-        display: flex;
         width: 100%;
+        display: flex;
         justify-content: space-between;
+
+        @include for-phone-only {
+            align-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: 100%;
+        }
 
         li {
             list-style: decimal-leading-zero;
             margin: 0px 35px;
+
+            @include for-phone-only {
+                margin: 0;
+                width: 100%;
+                background-color: $brown-light;
+            }
             &::marker {
                 color: $brown-dark;
             }
@@ -16,6 +38,12 @@
                 text-decoration: none;
                 &:hover {
                     text-decoration: underline;
+                }
+                @include for-phone-only {
+                    height: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
         }

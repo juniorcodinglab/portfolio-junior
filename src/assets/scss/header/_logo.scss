@@ -4,6 +4,9 @@
     align-items: center;
     img {
         width: 100px;
+        @include for-phone-only {
+            display: none;
+        }
     }
     span {
         font-weight: 700;
@@ -12,5 +15,9 @@
         b {
             color: $brown-dark;
         }
+    }
+
+    @include for-phone-only {
+
     }
 }

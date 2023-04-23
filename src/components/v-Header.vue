@@ -1,6 +1,6 @@
 <script>
-
 import SVG_CV from './../img/Icon-CV.vue';
+import SVG_Menu from './../img/Icon-Menu.vue';
 
 export default {
   data() {
@@ -16,17 +16,24 @@ export default {
     }
   },
   components: {
-    'Icon-CV': SVG_CV
+    'Icon-CV': SVG_CV,
+    'Icon-Menu': SVG_Menu,
   }
 }
 </script>
 
 <template>
   <header class="header">
+
+    <div class="header__menu">
+      <Icon-Menu />
+    </div>
+
     <div class="header__logo">
       <img :src="logo.src" alt="Logo Junior Coding">
       <span>junior<b>.</b>coding</span>
     </div>
+
     <nav class="header__nav">
       <ul>
         <li>
@@ -46,7 +53,7 @@ export default {
     <div class="header__cv">
       <a href="#">
         <Icon-CV />
-        Currículo
+        <span>Currículo</span>
       </a>
     </div>
   </header>

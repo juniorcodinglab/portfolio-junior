@@ -18,5 +18,10 @@
                 fill: #FFF;
             }
         }
+        span {
+            @include for-phone-only {
+                display: none;
+            }
+        }
     }
 }
