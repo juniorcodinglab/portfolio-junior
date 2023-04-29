@@ -4,6 +4,13 @@
   font-weight: 400;
 }
 
+
+@font-face {
+  font-family: SFMono;
+  src: url('./assets/fonts/SFMonoSemibold.otf');
+  font-weight: 600;
+}
+
 @font-face {
   font-family: SFMono;
   src: url('./assets/fonts/SFMonoBold.otf');
@@ -18,5 +25,6 @@
 
 
 * {
-  font-family: SFMono !important;
+  font-family: SFMono !important; 
+  color: $black;
 }

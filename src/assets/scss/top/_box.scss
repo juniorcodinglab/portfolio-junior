@@ -32,7 +32,6 @@
         font-weight: 300;
         font-size: 20px;
         line-height: 150%;
-        color: $black;
         @include for-phone-only {
             font-size: 16px;
         }

@@ -1,0 +1,30 @@
+&__menu {
+    background-color: $brown-lighter;
+    width: 260px;
+    padding: 20px;
+
+    @include for-phone-only {
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        padding: 0;
+    }
+
+    .item {
+        padding: 20px 0;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        &.active {
+            color: $brown-dark;
+            font-weight: 700;
+            @include for-phone-only {  
+                background-color: $brown-light;
+            }
+        }
+        @include for-phone-only {
+            width: fit-content;
+            padding: 20px;
+        }
+    }
+}

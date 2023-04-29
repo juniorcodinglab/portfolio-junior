@@ -1,0 +1,51 @@
+&__content{
+    padding: 20px 0 40px 80px;
+
+    @include for-phone-only {  
+        padding: 20px;
+        width: 100%;
+    }
+
+    .item {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        h5 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+        &__subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: $brown-dark;
+            margin-top: 10px;
+            display: block;
+        }
+        ul {
+            margin-top: 20px;
+            li {
+                padding: 5px 0;
+                list-style: url('/src/img/List-Style.svg');
+                list-style-position: inside;
+                font-size: 14px;
+            }
+        }
+        .techs {
+            @include flex('x', 'start');
+            margin-top: 10px;
+            flex-wrap: wrap;
+            span {
+                padding: 5px;
+                font-size: 14px;
+                &:not(span:last-child) {
+                    &::after {
+                        content: " | ";
+                    }
+                }
+            }
+        }
+    }   
+}
