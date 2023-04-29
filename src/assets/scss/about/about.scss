@@ -1,4 +1,5 @@
 .about {
+    padding-bottom: 100px;
     &__title {
         h4 {
             font-size: 32px;
@@ -7,11 +8,17 @@
             width: 100%;
             @include flex('y');
             flex: 1;
+            @include for-phone-only {
+                padding: 0 10px;
+            }
             .number {
                 color: $brown-dark;
             }
             .title {
-                width: 260px;
+                min-width: 260px;
+                @include for-phone-only {
+                    min-width: 200px;
+                }
             }
             &:after {
                 content: "";
@@ -27,22 +34,40 @@
         @include flex('x', 'space-between');
         margin-top: 20px;
         position: relative;
+        gap: 40px;
+        @include for-phone-only {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
 
         .text {
-            margin-right: 40px;
+            @include for-phone-only {
+                padding: 20px;
+            }
             p {
                 font-size: 16px;
                 line-height: 200%;
+                @include for-phone-only {
+                    font-size: 14px;
+                    line-height: 180%;
+                    text-align: justify;
+                }
             }
             ul {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 margin-top: 20px;
+                @include for-phone-only {
+                    grid-template-columns: 1fr 1fr;
+                }
 
                 li {
                     list-style: url('/src/img/List-Style.svg');
                     list-style-position: inside;
                     padding: 5px 0;
+                    @include for-phone-only {   
+                        font-size: 12px;
+                    }
                 }
             }
         }
@@ -53,6 +78,11 @@
             overflow: hidden;
             min-width: 250px;
             position: relative;
+            @include for-phone-only {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+            }
 
             &:after {
                 content: "";
@@ -65,6 +95,9 @@
                 z-index: 2;
                 transition: all .2s ease-in-out;
                 cursor: pointer;
+                @include for-phone-only {
+                    opacity: 0;
+                }
             }
             &:hover {
                 &:after {
@@ -85,8 +118,9 @@
             right: -20px;
             margin-top: 20px;
             z-index: 0;
-            
-
+            @include for-phone-only {
+                display: none;
+            }
         }
     }
     

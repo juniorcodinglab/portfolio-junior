@@ -1,5 +1,5 @@
 .top {
-    padding: 100px 20px;
+    padding: 100px 80px;
     height: calc(100vh - 120px);
     @include flex('xy');
 
@@ -10,4 +10,7 @@
 
     @import 'box';
     @import 'social';
+    &__email {
+        display: none;
+    }
 }
