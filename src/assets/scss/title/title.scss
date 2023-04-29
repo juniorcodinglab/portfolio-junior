@@ -1,0 +1,29 @@
+.title {
+    h4 {
+        font-size: 32px;
+        color: $black;
+        font-weight: 700;
+        width: 100%;
+        @include flex('y');
+        flex: 1;
+        @include for-phone-only {
+            padding: 0 10px;
+        }
+        .number {
+            color: $brown-dark;
+        }
+        .text {
+            min-width: 260px;
+            @include for-phone-only {
+                min-width: 200px;
+            }
+        }
+        &:after {
+            content: "";
+            background-color: $green-light;
+            height: 1px;
+            width: 100%;
+            display: inline-block;
+        }
+    }
+}

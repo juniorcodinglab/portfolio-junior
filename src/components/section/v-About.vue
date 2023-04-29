@@ -1,6 +1,11 @@
 <script>
 
+import Title from './../../components/widgets/v-Title.vue';
+
 export default {
+  components: {
+    'Title': Title
+  },
   data() {
     return {
       thumb: {
@@ -15,9 +20,9 @@ export default {
 
 <template>
   <div class="about">
-    <div class="about__title">
-      <h4><span class="number">01.</span> <span class="title">Sobre mim</span></h4>
-    </div>
+    
+    <Title number=1 title="Sobre mim" />
+    
     <div class="about__content">
 
       <div class="text">
@@ -34,6 +39,7 @@ export default {
           <li>JavaScript (ES6+)</li>
           <li>Node.JS</li>
           <li>React.JS</li>
+          <li>Vue.js</li>
           <li>Next.JS</li>
           <li>Typescript</li>
           <li>PHP</li>
