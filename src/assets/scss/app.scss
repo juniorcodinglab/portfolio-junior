@@ -5,6 +5,11 @@
 
 @import 'header/header';
 
-h1 {
-    color: red ;
+@import 'top/top';
+@import 'about/about';
+
+.content {
+    max-width: 1400px;
+    padding: 0 120px;
+    margin: 0 auto;
 }

@@ -1,0 +1,34 @@
+&__social {
+    position: fixed;
+    display: none;
+    height: 100vh;
+
+    > div {
+        @include flex('y');
+        flex-direction: column;
+        gap: 20px;
+        background-color: #fff;
+
+        transform: translateY(-50%);
+        top: 50%;
+        left: 50px;
+    }
+
+    &::after {
+        bottom: 0;
+        position: fixed;
+        content: "";
+        width: 10px;
+        height:calc(50vh - 200px);
+        background-color: #91A398;;
+    }
+
+    svg {
+        display: block;
+        width: 40px;
+        fill: #91A398;
+        path {
+            fill: #91A398;
+        }
+    }
+}

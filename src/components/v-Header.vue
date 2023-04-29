@@ -24,7 +24,6 @@ export default {
 
 <template>
   <header class="header">
-
     <div class="header__menu">
       <Icon-Menu />
     </div>

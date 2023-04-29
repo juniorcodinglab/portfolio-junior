@@ -10,6 +10,13 @@
   font-weight: 700;
 }
 
+@font-face {
+  font-family: SFMono;
+  src: url('./assets/fonts/SFMonoHeavy.otf');
+  font-weight: 900;
+}
+
+
 * {
   font-family: SFMono !important;
 }

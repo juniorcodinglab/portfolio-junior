@@ -1,7 +1,5 @@
 &__logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex('xy');
     img {
         width: 100px;
         @include for-phone-only {
@@ -15,9 +13,5 @@
         b {
             color: $brown-dark;
         }
-    }
-
-    @include for-phone-only {
-
     }
 }

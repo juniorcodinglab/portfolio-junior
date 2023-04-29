@@ -1,0 +1,13 @@
+.top {
+    padding: 100px 20px;
+    height: calc(100vh - 120px);
+    @include flex('xy');
+
+    @include for-phone-only {
+        @include flex('x');
+        padding: 40px 24px;
+    }
+
+    @import 'box';
+    @import 'social';
+}

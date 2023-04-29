@@ -1,7 +1,11 @@
 &__menu {
-    svg {
-        width: 45px;
-        height: 45px;
-        fill: $brown-dark;
+    display: none;
+
+    @include for-phone-only {
+        svg {
+            width: 45px;
+            height: 45px;
+            fill: $brown-dark;
+        }
     }
 }

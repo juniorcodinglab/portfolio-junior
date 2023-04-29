@@ -1,0 +1,44 @@
+&__box {
+    h4 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        color: $brown-dark;
+        margin-bottom: 15px;
+    }
+    h1 {
+        font-weight: 900;
+        font-size: 71px;
+        line-height: 100%;
+        color: $green-dark;
+        margin-bottom: 10px;
+        @include for-phone-only {
+            font-size: 39px;
+            margin-bottom: 0;
+        }
+    }
+    h2 {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 100%;
+        color: $green-light;
+        margin: 5px 0 40px;
+        @include for-phone-only {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+    p {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 150%;
+        color: $black;
+        @include for-phone-only {
+            font-size: 16px;
+        }
+        span {
+            background-color: rgba(145, 163, 152, 0.5);
+            padding: 5px;   
+        }
+    }
+}

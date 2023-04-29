@@ -1,7 +1,6 @@
 &__cv {
     a {
-        display: flex;
-        align-items: center;
+        @include flex('x');
         padding: 10px;
         text-decoration: none;
         color: $brown-dark;

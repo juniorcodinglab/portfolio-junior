@@ -1,6 +1,6 @@
 &__nav {
     @include for-phone-only {
-        display: block;
+        //display: block;
         display: none;
         position: fixed;
         width: 90%;
@@ -11,8 +11,7 @@
     }
     ul {
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        @include flex('x', space-between);
 
         @include for-phone-only {
             align-content: center;
@@ -41,9 +40,7 @@
                 }
                 @include for-phone-only {
                     height: 50px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include flex('xy');
                 }
             }
         }

@@ -1,8 +1,5 @@
 .header {
-    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex('xy', space-between);
     padding: 20px 60px;
     border-bottom: 1px solid $brown-dark;
 
