@@ -1,0 +1,77 @@
+&__content {
+    position: relative;
+    h5 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: right;
+        @include for-phone-only {
+            padding: 0 20px;
+        }
+    }
+    h4 {
+        display: block;
+        margin-top: 5px; 
+        font-size: 22px;
+        color: $brown-dark;
+        font-weight: 700;
+        text-align: right;
+        @include for-phone-only {
+            padding: 0 20px;
+        }
+    }
+    img {
+        display: none;
+        @include for-phone-only {
+            display: block;
+            width: 100%;
+        }
+    }
+    &-text {
+        background-color: $blue;
+        padding: 20px;
+        margin: 10px 0; 
+        width: 120%;
+        float: right;
+        @include for-phone-only {
+            width: 100%;
+        }
+        p {
+            font-size: 14px;
+            line-height: 170%;
+            color: #FFF;
+        }
+    }
+    
+    &-techs {
+        padding-top: 10px;
+        text-align: right;
+        @include for-phone-only {
+            padding: 0 20px;
+        }
+        span {
+            color: $green-dark;
+            padding: 10px;
+            font-size: 14px;
+        }
+    }
+    a {
+        display: block;
+        margin-top: 10px;
+        border: 1px solid $green-dark;
+        border-radius: 4px;
+        width: fit-content;
+        padding: 5px;
+        text-decoration: none;
+        color: $green-dark;
+        float: right;
+        transition: .4s all ease;
+        @include for-phone-only {
+            margin-right: 20px;
+        }
+        &:hover {
+            text-decoration: underline;
+            background-color: $green-dark;
+            color: #FFF;
+        }
+    }
+}

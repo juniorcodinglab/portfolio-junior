@@ -1,0 +1,23 @@
+&.left {
+    flex-direction: row-reverse;
+    .box__content {
+        h5 {
+            text-align: left;
+        }
+        h4 {
+            text-align: left;
+        }
+        &-techs {
+            text-align: left;
+        }
+        &-text {
+            float: left;
+        }
+        a {
+            float: left;
+            @include for-phone-only {
+                margin-left: 20px;
+            }
+        }
+    }
+}

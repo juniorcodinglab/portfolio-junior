@@ -4,7 +4,7 @@ import Title from './../../components/widgets/v-Title.vue';
 
 export default {
   components: {
-    'Title': Title
+    Title
   },
   data() {
     return {

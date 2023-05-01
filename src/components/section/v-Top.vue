@@ -1,20 +1,13 @@
 <script>
-import Icon_Github from './../../img/Icon-Github.vue';
-import Icon_Insta from './../../img/Icon-Insta.vue';
-import Icon_Twitter from './../../img/Icon-Twitter.vue';
-import Icon_Linkedin from './../../img/Icon-Linkedin.vue';
-import Icon_Whats from './../../img/Icon-Whats.vue';
-import Icon_Email from './../../img/Icon-Email.vue';
+import IconGithub from './../../img/Icon-Github.vue';
+import IconInsta from './../../img/Icon-Insta.vue';
+import IconTwitter from './../../img/Icon-Twitter.vue';
+import IconLinkedin from './../../img/Icon-Linkedin.vue';
+import IconWhats from './../../img/Icon-Whats.vue';
+import IconEmail from './../../img/Icon-Email.vue';
 
 export default {
-  components: {
-    'Icon-Github': Icon_Github,
-    'Icon-Insta': Icon_Insta,
-    'Icon-Twitter': Icon_Twitter,
-    'Icon-Linkedin': Icon_Linkedin,
-    'Icon-Whats': Icon_Whats,
-    'Icon-Email': Icon_Email,
-  }
+
 }
 </script>
 
@@ -33,12 +26,12 @@ export default {
 
   <div class="top__social">
     <div>
-      <Icon-Github />
-      <Icon-Insta />
-      <Icon-Twitter />
-      <Icon-Linkedin />
-      <Icon-Whats />
-      <Icon-Email />
+      <IconGithub />
+      <IconInsta />
+      <IconTwitter />
+      <IconLinkedin />
+      <IconWhats />
+      <IconEmail />
     </div>
   </div>
 

@@ -1,0 +1,10 @@
+.footer {
+    text-align: center;
+    font-size: 25px;
+    color: $blue;
+    text-decoration: underline;
+    padding: 250px 20px 20px;
+    @include for-phone-only {
+        font-size: 16px;
+    }
+}

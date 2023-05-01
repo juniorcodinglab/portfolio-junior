@@ -1,0 +1,46 @@
+.contact {
+    &__text {
+        margin-top: 40px;
+        p {
+            text-align: center;
+            font-size: 24px;
+            line-height: 170%;
+            @include for-phone-only {
+                font-size: 16px;
+                padding: 0 20px
+            }
+        }
+    }
+    &__buttons {
+        @include flex('x');
+        gap: 10px;
+        padding: 50px;
+        a {
+            @include flex('xy');
+            gap: 5px;
+            border: 1px solid $blue;
+            border-radius: 6px;
+            padding: 10px 15px;
+            text-decoration: none;
+            transition: .4s all ease;
+            font-size: 26px;
+            color: $blue;
+            @include for-phone-only {
+                font-size: 18px;
+            }
+            &:hover {
+                background-color: $blue;
+                color: #FFF;
+                svg path {
+                    fill: #FFF;
+                    transition: .4s all ease;
+                }
+            }
+            svg {
+                fill: $blue;
+                width: 32px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,13 @@
+.project {
+    padding: 100px 0;
+    .box {
+        display: flex;
+        padding: 40px 0;
+        @include for-phone-only {
+            flex-wrap: wrap;
+        }
+        @import 'img';
+        @import 'content';
+        @import '-left';
+    }
+}

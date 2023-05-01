@@ -1,6 +1,6 @@
 <script>
-import SVG_CV from './../img/Icon-CV.vue';
-import SVG_Menu from './../img/Icon-Menu.vue';
+import IconCV from './../../img/Icon-CV.vue';
+import IconMenu from './../../img/Icon-Menu.vue';
 
 export default {
   data() {
@@ -16,8 +16,8 @@ export default {
     }
   },
   components: {
-    'Icon-CV': SVG_CV,
-    'Icon-Menu': SVG_Menu,
+    IconCV,
+    IconMenu,
   }
 }
 </script>
