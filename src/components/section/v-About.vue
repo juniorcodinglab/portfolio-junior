@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       thumb: {
-        src: './src/img/Foto-Perfil.png',
+        src: './static/img/Foto-Perfil.png',
         alt: "Foto de Perfil - Junior Coding"
       },
     }
