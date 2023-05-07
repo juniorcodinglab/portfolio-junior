@@ -2,10 +2,29 @@
     display: none;
 
     @include for-phone-only {
-        svg {
-            width: 45px;
-            height: 45px;
-            fill: $brown-dark;
+        display: block;
+
+        button.btn-hamburger {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 4px;
+
+            span {
+                display: block;
+                width: 25px;
+                border-top: 3px solid $black;
+                &::after, &::before  {
+                    content: "";
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background: currentColor;
+                    margin-top: 6px;
+                    position: relative;
+                    transition: .3s;
+                }
+            }
         }
     }
 }

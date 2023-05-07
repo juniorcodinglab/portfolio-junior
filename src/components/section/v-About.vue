@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="about">
+  <div id="s-about" class="about">
     
     <Title number=1 title="Sobre mim" />
     

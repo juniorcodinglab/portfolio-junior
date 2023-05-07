@@ -40,7 +40,7 @@ export default {
                 techs: [
                     'Produção de conteúdo', 'Mkt. Digital'
                 ],
-                link: 'https://www.cowboys.com.br/',
+                link: 'https://www.instagram.com/junior.coding/',
                 img: {
                     src: './public/img/projects/Instagram.png',
                     alt: 'Instagram',
@@ -54,7 +54,7 @@ export default {
 </script>
 
 <template>
-  <div class="project">
+  <div id="s-project" class="project">
     
     <Title number=3 title="Projetos" />
 

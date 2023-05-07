@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="contact">
+  <div id="s-contact" class="contact">
     
     <Title number=4 title="Qual será o próximo?" position="center"/>
 

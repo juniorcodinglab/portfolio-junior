@@ -12,6 +12,29 @@
     @import '_menu';
     @import '_logo';
     @import '_nav';
+    &.active {
+        .header__menu {
+            button.btn-hamburger {
+                span {
+                    border-top-color: transparent;
+                    &::before {
+                        transform: rotate(135deg)
+                    }
+                    &::after {
+                        transform: rotate(-135deg);
+                        top: -9px
+                    }
+                }
+            }
+        }
+        .header__nav {
+            @include for-phone-only {
+                height: calc(100vh - 75px);
+                visibility: visible;
+                overflow-y: auto;
+            }
+        }
+    }
     @import '_cv';
 }
 

@@ -17,10 +17,11 @@ export default {
                 actions: [
                     'Desenvolvimento front-end para páginas de campanhas e tema da loja virtual.',
                     'Atualização e manutenção dos sistemas back-end da empresa.',
-                    'Coordenador técnico da versão 2 do APP Mobile.',
-                    'Suporte interno a plataforma Tray para os colaboradores.'
+                    'Back-end e Coordenador técnico da versão 2 do APP Mobile da FUT.',
+                    'Suporte interno a plataforma Tray para os colaboradores.',
+                    'Análise de processos utilizando BPMN.'
                 ],
-                techs: ['PHP', "MySQL", "MongoDB", "HTML", "CSS", "SASS", "JS", "jQuery"],
+                techs: ['PHP', "MySQL", "MongoDB", "HTML", "CSS", "SASS", "JS", "jQuery", "BPMN"],
                 link: "https://www.futfanatics.com.br/",
             }, {   
                 enterprise: "Andorinha S.A",
@@ -43,7 +44,7 @@ export default {
 </script>
 
 <template>
-  <div class="experience">
+  <div id="s-experience" class="experience">
     
     <Title number=2 title="Experiências" />
 

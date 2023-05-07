@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="top">
+  <div id="s-top" class="top">
     <div class="top__box">
       <h4>Olá, meu nome é</h4>
       <h1>Silvio Junior</h1>

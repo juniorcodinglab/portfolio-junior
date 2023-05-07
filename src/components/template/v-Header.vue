@@ -10,23 +10,34 @@ export default {
       },
       icon: {
         cv: {
-          src: './public/img/Icon-CV.svg' 
+          src: './public/img/Icon-CV.svg',
+          link: './static/Curriculo_FullStack.pdf'
         }
-      }
+      },
+      menuActive: false,
     }
   },
   components: {
     IconCV,
     IconMenu,
+  },
+  methods: {
+    openMenu() {
+      this.menuActive = !this.menuActive
+    }
+  
   }
 }
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" :class="!this.menuActive || 'active' ">
     <div class="header__menu">
-      <Icon-Menu />
+      <button class="btn-hamburger" @click="openMenu">
+        <span></span>
+      </button>
     </div>
+
 
     <div class="header__logo">
       <img :src="logo.src" alt="Logo Junior Coding">
@@ -36,21 +47,22 @@ export default {
     <nav class="header__nav">
       <ul>
         <li>
-          <a href="#">Sobre Mim</a>
+          <a href="#s-about">Sobre Mim</a>
         </li>
         <li>
-          <a href="#">Experiência</a>
+          <a href="#s-experience">Experiência</a>
         </li>
         <li>
-          <a href="#">Serviços</a>
+          <a href="#s-project">Serviços</a>
         </li>
         <li>
-          <a href="#">Contato</a>
+          <a href="#s-contact">Contato</a>
         </li>
       </ul>
     </nav>
+
     <div class="header__cv">
-      <a href="#">
+      <a :href="icon.cv.link" target="_blank">
         <Icon-CV />
         <span>Currículo</span>
       </a>

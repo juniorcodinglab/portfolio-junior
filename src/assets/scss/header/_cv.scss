@@ -9,11 +9,17 @@
         gap: 5px;
         transition: .2s all ease-in-out;
 
+        @include for-phone-only {
+            padding: 6px;
+        }
+
         &:hover {
             background-color: $brown-dark;
-            color: #FFF;
-
-            path {
+            span {
+                color: #FFF;
+            
+            }
+            svg path {
                 fill: #FFF;
             }
         }
