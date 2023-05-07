@@ -6,10 +6,10 @@ export default {
   data() {
     return {
       logo: {
-        src: '../src/assets/img/Logo.png' 
+        src: '/static/Logo.png' 
       },
       cv: {
-        src: '../src/assets/Curriculo_FullStack.pdf'
+        src: '/static/Curriculo_FullStack.pdf'
       },
       menuActive: false,
     }

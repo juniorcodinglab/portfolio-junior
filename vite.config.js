@@ -21,5 +21,7 @@ export default defineConfig({
       main: resolve(__dirname, 'index.html'),
       nested: resolve(__dirname, 'dist/index.html'),
     },
+    assetsPublicPath: '/',
+    assetsSubDirectory: 'static'
   }
 })

@@ -18,7 +18,7 @@ export default {
                 ],
                 link: 'https://www.rvtechdistribuidora.com.br/',
                 img: {
-                    src: '../public/img/projects/RV-Tech.png',
+                    src: '/static/RV-Tech.png',
                     alt: 'Projeto Distribuidora RVTech',
                 }
             },{
@@ -30,7 +30,7 @@ export default {
                 ],
                 link: 'https://www.cowboys.com.br/',
                 img: {
-                    src: './public/img/projects/Cowboys.png',
+                    src: '/static/Cowboys.png',
                     alt: 'Projeto Cowboys',
                 }
             },{
@@ -42,7 +42,7 @@ export default {
                 ],
                 link: 'https://www.instagram.com/junior.coding/',
                 img: {
-                    src: './public/img/projects/Instagram.png',
+                    src: '/static/Instagram.png',
                     alt: 'Instagram',
                 }
             }
