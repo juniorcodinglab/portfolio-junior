@@ -6,11 +6,11 @@ export default {
   data() {
     return {
       logo: {
-        src: './static/img/Logo.png' 
+        src: './public/img/Logo.png' 
       },
       icon: {
         cv: {
-          src: './static/img/Icon-CV.svg' 
+          src: './public/img/Icon-CV.svg' 
         }
       }
     }
