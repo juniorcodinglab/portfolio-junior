@@ -18,7 +18,7 @@ export default {
                 ],
                 link: 'https://www.rvtechdistribuidora.com.br/',
                 img: {
-                    src: './public/img/projects/RV-Tech.png',
+                    src: '../public/img/projects/RV-Tech.png',
                     alt: 'Projeto Distribuidora RVTech',
                 }
             },{
