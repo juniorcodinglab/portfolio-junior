@@ -6,13 +6,10 @@ export default {
   data() {
     return {
       logo: {
-        src: './public/img/Logo.png' 
+        src: '../src/assets/img/Logo.png' 
       },
-      icon: {
-        cv: {
-          src: './public/img/Icon-CV.svg',
-          link: './static/Curriculo_FullStack.pdf'
-        }
+      cv: {
+        src: '../src/assets/Curriculo_FullStack.pdf'
       },
       menuActive: false,
     }
@@ -62,7 +59,7 @@ export default {
     </nav>
 
     <div class="header__cv">
-      <a :href="icon.cv.link" target="_blank">
+      <a :href="cv.src" target="_blank">
         <Icon-CV />
         <span>Currículo</span>
       </a>
