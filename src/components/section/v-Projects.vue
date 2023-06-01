@@ -2,6 +2,10 @@
 
 import Title from './../../components/widgets/v-Title.vue';
 
+import img_rvtech from '../../../static/RV-Tech.png';
+import img_cowboys from '../../../static/Cowboys.png';
+import img_instagram from '../../../static/Instagram.png';
+
 export default {
   components: {
     Title
@@ -18,7 +22,7 @@ export default {
                 ],
                 link: 'https://www.rvtechdistribuidora.com.br/',
                 img: {
-                    src: '/static/RV-Tech.png',
+                    src: img_rvtech,
                     alt: 'Projeto Distribuidora RVTech',
                 }
             },{
@@ -30,7 +34,7 @@ export default {
                 ],
                 link: 'https://www.cowboys.com.br/',
                 img: {
-                    src: '/static/Cowboys.png',
+                    src: img_cowboys,
                     alt: 'Projeto Cowboys',
                 }
             },{
@@ -42,7 +46,7 @@ export default {
                 ],
                 link: 'https://www.instagram.com/junior.coding/',
                 img: {
-                    src: '/static/Instagram.png',
+                    src: img_instagram,
                     alt: 'Instagram',
                 }
             }

@@ -25,8 +25,8 @@ export default {
     </div>
 
     <div class="contact__buttons">
-        <a class="" href=""><IconWhats/> Diga oi</a>
-        <a href=""><IconEmail/></a>
+        <a target="_blank"  href="https://api.whatsapp.com/send?phone=5518997200285"><IconWhats/> Diga oi</a>
+        <a target="_blank" href="mailto:silvio_cbsj@hotmail.com" ><IconEmail/></a>
     </div>
   </div>
 </template>

@@ -2,6 +2,8 @@
 
 import Title from './../../components/widgets/v-Title.vue';
 
+import img_perfil from '../../../static/Foto-Perfil.png';
+
 export default {
   components: {
     Title
@@ -9,7 +11,7 @@ export default {
   data() {
     return {
       thumb: {
-        src: '/static/Foto-Perfil.png',
+        src: img_perfil,
         alt: "Foto de Perfil - Junior Coding"
       },
     }

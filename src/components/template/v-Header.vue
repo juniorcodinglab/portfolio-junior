@@ -2,16 +2,35 @@
 import IconCV from './../../img/Icon-CV.vue';
 import IconMenu from './../../img/Icon-Menu.vue';
 
+import img_logo from '../../../static/Logo.png';
+import img_cv from '../../../static/Curriculo_FullStack.pdf';
+
+
 export default {
   data() {
     return {
       logo: {
-        src: '/static/Logo.png' 
+        src: img_logo
       },
       cv: {
-        src: '/static/Curriculo_FullStack.pdf'
+        src: img_cv
       },
       menuActive: false,
+      menu: [
+        {
+          text: 'Sobre Mim',
+          href: '#s-about'
+        },{
+          text: 'Experiência',
+          href: '#s-experience'
+        },{
+          text: 'Serviços',
+          href: '#s-project'
+        },{
+          text: 'Contato',
+          href: '#s-contact'
+        },
+      ]
     }
   },
   components: {
@@ -21,6 +40,22 @@ export default {
   methods: {
     openMenu() {
       this.menuActive = !this.menuActive
+    },
+    goToSection(e) {
+      e.preventDefault();
+
+      const $el = e.target;
+      const id = $el.getAttribute('href');
+      const $section = document.querySelector(id);
+      // Where the element is the TOP
+      const sectionTop = $section.offsetTop;
+      console.log(sectionTop);
+
+      window.scroll({
+        top: sectionTop,
+        behavior: "smooth",
+      
+      })
     }
   
   }
@@ -43,17 +78,8 @@ export default {
 
     <nav class="header__nav">
       <ul>
-        <li>
-          <a href="#s-about">Sobre Mim</a>
-        </li>
-        <li>
-          <a href="#s-experience">Experiência</a>
-        </li>
-        <li>
-          <a href="#s-project">Serviços</a>
-        </li>
-        <li>
-          <a href="#s-contact">Contato</a>
+        <li v-for="item in menu">
+          <a :href="item.href" @click="goToSection">{{item.text}}</a>
         </li>
       </ul>
     </nav>
