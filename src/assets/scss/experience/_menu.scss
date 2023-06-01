@@ -1,7 +1,7 @@
 &__menu {
     background-color: $brown-lighter;
-    width: 260px;
     padding: 20px;
+    min-width: 260px;
 
     @include for-phone-only {
         width: 100%;

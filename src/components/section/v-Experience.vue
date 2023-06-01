@@ -10,6 +10,7 @@ export default {
     return {
         experiences: [
             {
+                id: 1,
                 enterprise: "FutFanatics",
                 title: 'Desenvolvedor Full-Stack',
                 subtitle: "Junho 2021 - Atualmente",
@@ -24,6 +25,7 @@ export default {
                 techs: ['PHP', "MySQL", "MongoDB", "HTML", "CSS", "SASS", "JS", "jQuery", "BPMN"],
                 link: "https://www.futfanatics.com.br/",
             }, {   
+                id: 2,
                 enterprise: "Andorinha S.A",
                 title: 'Estagiário de TI',
                 subtitle: "Janeiro 2020 - Junho - 2021",
@@ -38,6 +40,15 @@ export default {
             }
         ]
     }
+  }, 
+  methods: {
+    changeExperience(e, id) {
+
+        this.experiences.map((el) => {
+            el.active = el.id == id ? true : false;
+            return {...el}
+        })
+    }
   }
 };
 
@@ -50,7 +61,7 @@ export default {
 
     <div class="experience__box box">
         <div class="box__menu">
-            <div v-for="experience in experiences" class="item" :class="experience.active ? 'active' : '' ">
+            <div v-for="experience in experiences" class="item" :class="experience.active ? 'active' : '' " @click="changeExperience($event,experience.id)">
                 {{ experience.enterprise }}
             </div>
         </div>

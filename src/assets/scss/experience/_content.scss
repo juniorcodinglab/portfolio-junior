@@ -1,5 +1,6 @@
 &__content{
     padding: 20px 0 40px 80px;
+    min-height: 400px;
 
     @include for-phone-only {  
         padding: 20px;
