@@ -1,7 +1,35 @@
+header {
+    &.fixed {
+        height: 76px;
+        width: 100%;
+        @include for-phone-only {
+            height: 75px;
+        }
+    }
+}
+
 .header {
+    
+    width: 100%;
+    background: #FFF;
     @include flex('xy', space-between);
     padding: 20px 60px;
     border-bottom: 1px solid $brown-dark;
+    z-index: 10;
+
+    &.fixed {
+        position: fixed;
+        transition: .3s linear;
+
+        @include for-desktop-only {
+            padding: 10px 60px;
+        }
+
+        .header__logo img {
+            transition: .3s ease;
+            width: 70px;
+        }
+    }
 
     @include for-phone-only {
         padding: 20px;

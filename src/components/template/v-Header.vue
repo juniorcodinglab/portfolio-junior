@@ -3,7 +3,7 @@ import IconCV from './../../img/Icon-CV.vue';
 import IconMenu from './../../img/Icon-Menu.vue';
 
 import img_logo from '../../../static/Logo.png';
-import img_cv from '../../../static/Curriculo_FullStack.pdf';
+import img_cv from '../../../static/Curriculo_FullStack_16-Ago.pdf';
 
 
 export default {
@@ -16,6 +16,7 @@ export default {
         src: img_cv
       },
       menuActive: false,
+      menuOpen: false,
       menu: [
         {
           text: 'Sobre Mim',
@@ -33,13 +34,19 @@ export default {
       ]
     }
   },
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  unmounted () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
   components: {
     IconCV,
     IconMenu,
   },
   methods: {
     openMenu() {
-      this.menuActive = !this.menuActive
+      this.menuOpen = !this.menuOpen
     },
     goToSection(e) {
       e.preventDefault();
@@ -56,39 +63,48 @@ export default {
         behavior: "smooth",
       
       })
+    },
+    handleScroll(event) {
+      console.log(event);
+
+      if (window.scrollY > 50) {
+        this.menuActive = true;
+      } else {
+        this.menuActive = false;
+      }
     }
-  
   }
 }
 </script>
 
 <template>
-  <header class="header" :class="!this.menuActive || 'active' ">
-    <div class="header__menu">
-      <button class="btn-hamburger" @click="openMenu">
-        <span></span>
-      </button>
-    </div>
+  <header :class="{ 'fixed' : this.menuActive }">
+    <div class="header" :class="{ 'fixed' : this.menuActive, 'active' : this.menuOpen  }">
+      <div class="header__menu">
+        <button class="btn-hamburger" @click="openMenu">
+          <span></span>
+        </button>
+      </div>
 
+      <div class="header__logo">
+        <img :src="logo.src" alt="Logo Junior Coding">
+        <span>junior<b>.</b>coding</span>
+      </div>
 
-    <div class="header__logo">
-      <img :src="logo.src" alt="Logo Junior Coding">
-      <span>junior<b>.</b>coding</span>
-    </div>
+      <nav class="header__nav">
+        <ul>
+          <li v-for="item in menu">
+            <a :href="item.href" @click="goToSection">{{item.text}}</a>
+          </li>
+        </ul>
+      </nav>
 
-    <nav class="header__nav">
-      <ul>
-        <li v-for="item in menu">
-          <a :href="item.href" @click="goToSection">{{item.text}}</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="header__cv">
-      <a :href="cv.src" target="_blank">
-        <Icon-CV />
-        <span>Currículo</span>
-      </a>
+      <div class="header__cv">
+        <a :href="cv.src" target="_blank">
+          <Icon-CV />
+          <span>Currículo</span>
+        </a>
+      </div>
     </div>
   </header>
 </template>
